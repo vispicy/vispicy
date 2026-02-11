@@ -97,9 +97,12 @@ Generating adult content on Vispicy is simple and straightforward:
 
    **Example prompts:**
    ```
-   "A beautiful woman in a red dress, evening gown style, photorealistic"
+   "ultra realistic, athletic Latina female, completely naked, shower scene, water droplets, cinematic lighting"
    "Artistic nude portrait, oil painting style, soft lighting"
+   "realistic photo, slim Japanese girl, naked, onsen hot spring, steam, soft focus background"
+   "photoreal, 20s European woman, topless, sheer wet white shirt, moody lighting, detailed pores"
    "Fashion photography, lingerie shoot, studio lighting"
+   "photorealistic, 25-year-old Asian woman, nude, soft natural lighting, bedroom, detailed skin texture, realistic"
    ```
 
 4. **Adjust Settings (Optional)**
