@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chili Animation - Vispicy</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+        }
+
+        .chili-container {
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+
+        /* Animation keyframes */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes shine {
+            0%, 100% {
+                opacity: 0.3;
+                transform: translateX(0);
+            }
+            50% {
+                opacity: 0.8;
+                transform: translateX(3px);
+            }
+        }
+
+        @keyframes rotate {
+            0%, 100% {
+                transform: rotate(-5deg);
+            }
+            50% {
+                transform: rotate(5deg);
+            }
+        }
+
+        .chili-icon {
+            width: 100%;
+            height: 100%;
+            animation: bounce 1s ease-in-out infinite, pulse 2s ease-in-out infinite;
+        }
+
+        .chili-icon svg {
+            width: 100%;
+            height: 100%;
+            animation: rotate 3s ease-in-out infinite;
+        }
+
+        .chili-body {
+            transform-origin: center center;
+        }
+
+        .chili-shine {
+            animation: shine 2s ease-in-out infinite;
+        }
+
+        /* Size variants */
+        .chili-container.sm {
+            width: 50px;
+            height: 50px;
+        }
+
+        .chili-container.lg {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chili-container">
+        <div class="chili-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <!-- Green stem -->
+                <path d="M11 4 L11 1.5" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
+
+                <!-- Green calyx (the star-shaped top) -->
+                <path d="M11 4 L9 5 L8 3.5 L11 4 Z" fill="#16a34a"/>
+                <path d="M11 4 L13 5 L14 3.5 L11 4 Z" fill="#16a34a"/>
+                <path d="M11 4 L11 6" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
+
+                <!-- Chili pepper body - elongated and curved -->
+                <path class="chili-body"
+                      d="M11 6 C9.5 6 8.5 7 8 8.5 C7 11 7.5 14 9 17 C10 19 12 21 13.5 21 C15 21 16.5 19 17 16 C18 12 17.5 9 16 7 C15 6 13 6 11 6Z"
+                      fill="#dc2626"
+                      stroke="#b91c1c"
+                      stroke-width="0.5"/>
+
+                <!-- Highlight curve for 3D effect -->
+                <path d="M9.5 9 C9 11 9.5 13 10.5 15"
+                      stroke="#fca5a5"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      fill="none"
+                      opacity="0.6"
+                      class="chili-shine"/>
+
+                <!-- Small shine spot -->
+                <ellipse cx="10" cy="11" rx="0.8" ry="1.2" fill="#fecaca" opacity="0.7" class="chili-shine"/>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>

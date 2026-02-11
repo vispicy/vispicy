@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chili Loading Animation Preview - Vispicy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 24px;
+            padding: 60px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-align: center;
+            background: linear-gradient(135deg, #dc2626, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 14px;
+        }
+
+        .preview-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .preview-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            padding: 24px;
+            background: #f9fafb;
+            border-radius: 12px;
+            width: 100%;
+        }
+
+        .preview-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #374151;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* 动画容器 */
+        .loading-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* SVG 样式 */
+        .chili-svg {
+            width: 64px;
+            height: 64px;
+            will-change: transform;
+        }
+
+        .chili-svg.sm {
+            width: 48px;
+            height: 48px;
+        }
+
+        .chili-svg.md {
+            width: 64px;
+            height: 64px;
+        }
+
+        .chili-svg.lg {
+            width: 128px;
+            height: 128px;
+        }
+
+        .chili-svg.xl {
+            width: 128px;
+            height: 128px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌶️ Vispicy Chili Loading Animation</h1>
+        <p class="subtitle">Smooth SVG animation using requestAnimationFrame</p>
+
+        <div class="preview-section">
+            <!-- 小尺寸 -->
+            <div class="preview-item">
+                <span class="preview-label">Small (48px)</span>
+                <div class="loading-container">
+                    <svg class="chili-svg sm" viewBox="0 0 24 24" fill="none" id="chili-sm">
+                        <!-- Green stem -->
+                        <path d="M11 4 L11 1.5" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
+                        <!-- Green calyx -->
+                        <path d="M11 4 L9 5 L8 3.5 L11 4 Z" fill="#16a34a"/>
+                        <path d="M11 4 L13 5 L14 3.5 L11 4 Z" fill="#16a34a"/>
+                        <path d="M11 4 L11 6" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
+                        <!-- Chili pepper body -->
+                        <path data-chili="body" d="M11 6 C9.5 6 8.5 7 8 8.5 C7 11 7.5 14 9 17 C10 19 12 21 13.5 21 C15 21 16.5 19 17 16 C18 12 17.5 9 16 7 C15 6 13 6 11 6Z" fill="#16a34a" stroke="#b91c1c" stroke-width="0.5"/>
+                        <!-- Highlight -->
+                        <path d="M9.5 9 C9 11 9.5 13 10.5 15" stroke="#fca5a5" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+                        <!-- Shine spot -->
+                        <ellipse data-chili="shine" cx="10" cy="11" rx="0.8" ry="1.2" fill="#fecaca" opacity="0.7"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- 中尺寸 -->
+            <div class="preview-item">
+                <span class="preview-label">Medium (64px)</span>
+                <div class="loading-container">
+                    <svg class="chili-svg md" viewBox="0 0 24 24" fill="none" id="chili-md">
+                        <!-- Green stem -->
+                        <path d="M11 4 L11 1.5" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
+                        <!-- Green calyx -->
+                        <path d="M11 4 L9 5 L8 3.5 L11 4 Z" fill="#16a34a"/>
+                        <path d="M11 4 L13 5 L14 3.5 L11 4 Z" fill="#16a34a"/>
+                        <path d="M11 4 L11 6" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
+                        <!-- Chili pepper body -->
+                        <path data-chili="body" d="M11 6 C9.5 6 8.5 7 8 8.5 C7 11 7.5 14 9 17 C10 19 12 21 13.5 21 C15 21 16.5 19 17 16 C18 12 17.5 9 16 7 C15 6 13 6 11 6Z" fill="#16a34a" stroke="#b91c1c" stroke-width="0.5"/>
+                        <!-- Highlight -->
+                        <path d="M9.5 9 C9 11 9.5 13 10.5 15" stroke="#fca5a5" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+                        <!-- Shine spot -->
+                        <ellipse data-chili="shine" cx="10" cy="11" rx="0.8" ry="1.2" fill="#fecaca" opacity="0.7"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- 大尺寸 -->
+            <div class="preview-item">
+                <span class="preview-label">Large (128px)</span>
+                <div class="loading-container">
+                    <svg class="chili-svg lg" viewBox="0 0 24 24" fill="none" id="chili-lg">
+                        <!-- Green stem -->
+                        <path d="M11 4 L11 1.5" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
+                        <!-- Green calyx -->
+                        <path d="M11 4 L9 5 L8 3.5 L11 4 Z" fill="#16a34a"/>
+                        <path d="M11 4 L13 5 L14 3.5 L11 4 Z" fill="#16a34a"/>
+                        <path d="M11 4 L11 6" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
+                        <!-- Chili pepper body -->
+                        <path data-chili="body" d="M11 6 C9.5 6 8.5 7 8 8.5 C7 11 7.5 14 9 17 C10 19 12 21 13.5 21 C15 21 16.5 19 17 16 C18 12 17.5 9 16 7 C15 6 13 6 11 6Z" fill="#16a34a" stroke="#b91c1c" stroke-width="0.5"/>
+                        <!-- Highlight -->
+                        <path d="M9.5 9 C9 11 9.5 13 10.5 15" stroke="#fca5a5" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+                        <!-- Shine spot -->
+                        <ellipse data-chili="shine" cx="10" cy="11" rx="0.8" ry="1.2" fill="#fecaca" opacity="0.7"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <p style="text-align: center; color: #999; font-size: 12px;">
+            ↑ 查看不同尺寸的动画效果
+        </p>
+    </div>
+
+    <script>
+        // 流畅的动画函数
+        function createSmoothAnimation(svgId) {
+            const svg = document.getElementById(svgId);
+            if (!svg) {
+                console.error('SVG not found:', svgId);
+                return;
+            }
+
+            console.log('Starting animation for:', svgId);
+
+            let startTime = null;
+            const duration = 2000; // 2秒一个循环
+
+            function animate(currentTime) {
+                if (!startTime) startTime = currentTime;
+                const elapsed = currentTime - startTime;
+                const progress = (elapsed % duration) / duration;
+
+                // 从绿色到红色的颜色渐变
+                const colorProgress = (Math.sin(progress * Math.PI * 2) + 1) / 2;
+                const bodyElement = svg.querySelector('[data-chili="body"]');
+                if (bodyElement) {
+                    // 绿色 #16a34a (22, 163, 74) -> 红色 #dc2626 (220, 38, 38)
+                    const r = Math.floor(22 + colorProgress * (220 - 22));
+                    const g = Math.floor(163 + colorProgress * (38 - 163));
+                    const b = Math.floor(74 + colorProgress * (38 - 74));
+                    bodyElement.setAttribute('fill', `rgb(${r}, ${g}, ${b})`);
+                }
+
+                // 高光动画
+                const shineElement = svg.querySelector('[data-chili="shine"]');
+                if (shineElement) {
+                    const shineProgress = (elapsed % 1500) / 1500;
+                    const newCx = 10 + Math.sin(shineProgress * Math.PI * 2) * 1;
+                    shineElement.setAttribute('cx', newCx.toString());
+                    shineElement.setAttribute('opacity', (0.5 + Math.sin(shineProgress * Math.PI * 2) * 0.5).toString());
+                }
+
+                requestAnimationFrame(animate);
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        // 等待页面和 SVG 加载完成后启动动画
+        window.addEventListener('load', () => {
+            console.log('Page loaded, starting animations...');
+            setTimeout(() => {
+                createSmoothAnimation('chili-sm');
+                createSmoothAnimation('chili-md');
+                createSmoothAnimation('chili-lg');
+            }, 100);
+        });
+
+        // 备用：DOMContentLoaded 也启动
+        if (document.readyState === 'complete') {
+            console.log('Document already complete, starting animations...');
+            createSmoothAnimation('chili-sm');
+            createSmoothAnimation('chili-md');
+            createSmoothAnimation('chili-lg');
+        }
+    </script>
+</body>
+</html>
