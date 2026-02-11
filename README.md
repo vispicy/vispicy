@@ -76,6 +76,56 @@ We support creative freedom while promoting responsible use:
 - Create consensual adult content only
 - Use generated content ethically and responsibly
 
+### 💡 How to Generate NSFW Content
+
+Generating adult content on Vispicy is simple and straightforward:
+
+#### Step-by-Step Guide:
+
+1. **Navigate to Text to Image**
+   - Go to [vispicy.com/text-to-image](https://vispicy.com/text-to-image)
+   - Sign in to your account (or create a free account)
+
+2. **Select the Right Model**
+   - Choose **"Vispicy 2.1"** model from the model dropdown
+   - This model is specifically optimized for NSFW content generation
+
+3. **Enter Your Prompt**
+   - Type your description in the prompt field
+   - **Include NSFW-related keywords** in your prompt
+   - Be descriptive and specific for best results
+
+   **Example prompts:**
+   ```
+   "A beautiful woman in a red dress, evening gown style, photorealistic"
+   "Artistic nude portrait, oil painting style, soft lighting"
+   "Fashion photography, lingerie shoot, studio lighting"
+   ```
+
+4. **Adjust Settings (Optional)**
+   - Set your preferred resolution (1024x1024 recommended)
+   - Choose additional parameters if available
+   - The Vispicy 2.1 model automatically handles NSFW content
+
+5. **Generate & Download**
+   - Click "Generate" button
+   - Wait for processing (usually 10-30 seconds)
+   - Download your creation
+
+#### ✅ NSFW Keywords to Use in Prompts
+
+For best results, include these keywords in your prompts:
+- "nsfw", "adult", "mature"
+- "suggestive", "sensual", "erotic"
+- "lingerie", "intimate", "boudoir"
+- "pinup", "glamour", "artistic nude"
+
+**Tips:**
+- Be specific about style (photorealistic, artistic, anime, etc.)
+- Mention lighting and atmosphere
+- Include pose and composition details
+- The more descriptive your prompt, the better the results
+
 ---
 
 ## 🎯 Who Uses Vispicy?
